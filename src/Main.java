@@ -96,6 +96,7 @@ public class Main extends PApplet {
         rect(0, height - TEXT_ZONE, width, TEXT_ZONE);
 
         if (uiMode == UIMode.Calibration) {
+            cursor(ARROW);
             fill(0);
             strokeWeight(1);
             stroke(0);
@@ -112,6 +113,7 @@ public class Main extends PApplet {
                 sensor.getElectrodes(i).updateUI();
             }
         } else {
+            noCursor();
             // Draw Background Vibes
             AudioPlayer player = sensor.player.getPlayer();
 
