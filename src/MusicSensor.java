@@ -21,7 +21,7 @@ public class MusicSensor extends AbstractSensor {
         for (int i = 0; i < electrodes.length; i++)
             electrodes[i] = new ThresholdElectrode(cp5, minRange, maxRange);
 
-        image = applet.loadImage(MusicSensor.class.getClassLoader().getResource("MusicSticker.png").getPath());
+        image = applet.loadImage(MusicSensor.class.getClassLoader().getResource("MusicSticker.png").getPath().replaceAll("%20", " "));
         xArea = new int[]{998, 823, 362, HIDE, 876, 748};
         yArea = new int[]{333, 249, 330, HIDE, 462, 501};
         sizeArea = new int[]{120, 180, 120, 0, 110, 110};

@@ -21,7 +21,7 @@ public class ClickWheelSensor extends AbstractSensor {
         for (int i = 0; i < electrodes.length; i++)
             electrodes[i] = new ThresholdElectrode(cp5, minRange, maxRange);
 
-        image = applet.loadImage(ClickWheelSensor.class.getClassLoader().getResource("ClickWheel.png").getPath());
+        image = applet.loadImage(ClickWheelSensor.class.getClassLoader().getResource("ClickWheel.png").getPath().replaceAll("%20", " "));
         xArea = new int[]{1010, 1321, 1010, 693};
         yArea = new int[]{798, 455, 107, 455};
         sizeArea = new int[]{140, 140, 140, 140};
